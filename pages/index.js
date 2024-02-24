@@ -18,7 +18,13 @@ export default function Index() {
     const inputBody = document.querySelector(e.target.getAttribute("data-input"))
     const outputBody = document.querySelector("#outputBody")
     const makeRequired = document.querySelector("#makeRequired")
-    outputBody.value = convertJsonToAvroSchema(inputBody.value, { "canBeNull": makeRequired.checked, "title": "generated avro schema test" })
+    let avroName = document.querySelector("#avroName").value 
+    if (avroName.length === 0) {
+      avroName = "generated avro schema test"
+    } 
+    if (isValideJson(inputBody.value)) {
+      outputBody.value = convertJsonToAvroSchema(inputBody.value, { "canBeNull": makeRequired.checked, "title": avroName })
+    }
   }
 
   const copyClipboard = (e) => {
@@ -47,9 +53,13 @@ export default function Index() {
               <textarea className={styles.textarea} id="inputBody" rows="6" placeholder='{&#10;&#x09;"text":"Enter your JSON here..."&#10;}'></textarea>
               <div className="d-flex afterTextarea">
                 <div>
-                  <div className="form-check form-switch">
+                <div className="form-check form-switch">
                     <input className="form-check-input" type="checkbox" role="switch" id="makeRequired" />
-                    <label className="form-check-label" htmlFor="makeRequired">Make required</label>
+                    <label className="form-check-label" htmlFor="makeRequired">Add null type and default</label>
+                  </div>
+                  <div className="form">
+                    <label className="form-label" htmlFor="avroName">Name AVRO</label>
+                    <input className="form-control form-control-sm" type="text" id="avroName" />
                   </div>
                 </div>
                 <button onClick={convertBody} id="wsSendButton" type="button" data-input="#inputBody"

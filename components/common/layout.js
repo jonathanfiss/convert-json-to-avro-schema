@@ -6,12 +6,11 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Convert JSON to RAML datatype</title>
+        <title>Convert JSON to AVRO schema</title>
         <meta name="description" content="Convert json to AVRO schema"></meta>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/x-icon" href="/favicon.svg"></link>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="google-site-verification" content="21m4xhh-BeM57W92dFu_VNTuu5recjRHtgZXQDGFdg0" />
       </Head>
       <div className='min-vh-100'>
