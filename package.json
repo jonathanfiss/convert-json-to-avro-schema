@@ -7,8 +7,8 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
+    "avsc": "^5.7.7",
     "bootstrap": "^5.2.0",
-    "js-yaml": "^4.1.0",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",

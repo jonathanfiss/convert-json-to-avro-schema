@@ -18,7 +18,7 @@ export default function Index() {
     const inputBody = document.querySelector(e.target.getAttribute("data-input"))
     const outputBody = document.querySelector("#outputBody")
     const makeRequired = document.querySelector("#makeRequired")
-    outputBody.value = convertJsonToAvroSchema(inputBody.value, { "required": makeRequired.checked })
+    outputBody.value = convertJsonToAvroSchema(inputBody.value, { "canBeNull": makeRequired.checked, "title": "generated avro schema test" })
   }
 
   const copyClipboard = (e) => {
