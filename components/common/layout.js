@@ -7,7 +7,8 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>Convert JSON to AVRO schema</title>
-        <meta name="description" content="Convert json to AVRO schema"></meta>
+        <meta name="description" content="Convert JSON to Avro Schema Online - Easily convert JSON data into Avro Schema format for your data processing needs."/>
+        <meta name="keywords" content="JSON to Avro Schema, Avro Schema Converter, JSON Converter, Avro Schema Online"/>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
