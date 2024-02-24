@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>Convert JSON to RAML datatype</title>
-        <meta name="description" content="Convert json payload to raml data type"></meta>
+        <meta name="description" content="Convert json to AVRO schema"></meta>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
